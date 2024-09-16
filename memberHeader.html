@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Member Menu</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div>
+        <h3> ~~~~~~~~~~Member Menu~~~~~~~~~~ </h3>
+
+        <ul class="mem-menu">
+            <li><a href="register.php">1. Registration</a></li>
+            <li><a href="login_member.php">2. Login</a></li>
+        </ul>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.submenuTitle').click(function() {
+                    $(this).next('.submenu').slideToggle();
+                });
+
+                $('.submenu a').click(function(e) {
+                    e.preventDefault();
+                    var url = $(this).attr('href');
+                    window.location.href = url;
+                });
+            });
+        </script>
+    </body>
+</html>
